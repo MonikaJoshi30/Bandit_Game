@@ -7,7 +7,7 @@ I made a ton of mistakes and was learning from them, so you also need to make mi
 
 So let's get started...
 
-# LEVEL 0
+### LEVEL 0
 This game start from level 0 , where you need to learn how to connect to the network of OverTheWire to start playing other lvels. This level consist of connecting with ssh to the server.
 
 
