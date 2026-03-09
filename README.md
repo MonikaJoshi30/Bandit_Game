@@ -27,3 +27,5 @@ So we need to use absolute path, like this 'cat ./-'
 <img width="1434" height="705" alt="Bandit1" src="https://github.com/user-attachments/assets/3d7a449e-772c-46b4-b0d8-706ce9b7b26d" />
 
 
+
+### LEVEL 2
