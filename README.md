@@ -61,3 +61,64 @@ cat ./...Hiding-From-You
 
 <img width="1435" height="720" alt="Bandit_Lvl3" src="https://github.com/user-attachments/assets/fabf8db3-34a6-437b-949d-2fdd2f9c7757" />
 
+
+
+### LEVEL 4
+The challenge for this level says that "The password for the next level is stored in the only human-readable file in the inhere directory ".
+So for a file to be human readble it should contain  plain text, characters, numbers, and punctuation, etc...
+And ASCII files has all these, so we only need to find that.
+When using 'ls' command we will see that this challenge has 9 different files and it's a tedious task to check each one of them, so we need something which will tell us what are the file format of the given files.
+Now that we already know what kind of file we need to find, we will use :-
+
+file ./*
+
+Here,
+
+file : is a standard Linux utility that determines the type of a file by examining its content, not just its name or extension.
+
+./   : explicitly refers to the current working directory.
+
+"*"    : this is a wildcard character that matches any number of characters (including zero) in a filename.
+
+./*  : when combined it tells shell to list out all non-hidden files and directories present in the current directory.
+
+
+
+
+<img width="1421" height="700" alt="Bandit4" src="https://github.com/user-attachments/assets/67b9d2ce-bfc7-4621-bcf6-699fed233d1d" />
+
+
+
+
+### LEVEL 5
+
+This time the challenge had three requirements to find the file which contains the password.
+So the challenge is 
+
+"The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
+
+* human-readable
+
+* 1033 bytes in size
+
+* not executable"
+
+So we know the file is somewhere in 'inhere' directory and possess some special property.
+
+To search we can use command like 'find' as it search for files. And for special properties we can use options like :
+
+-type f : to search for files
+
+. : will search from the current working directory
+
+-size 1033c : for files that are exactly 1033 bytes in size where 'c' is for bytes
+
+-not -executable : finds only non executable files
+
+-exec file {} + : execute the file command on all the results returns by find
+
+grep : to only select the necessary file 
+
+<img width="1384" height="703" alt="Bandit5" src="https://github.com/user-attachments/assets/8dba8de2-e9aa-45c0-9acc-8141d5b67739" />
+
+
