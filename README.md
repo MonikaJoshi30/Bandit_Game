@@ -122,3 +122,44 @@ grep : to only select the necessary file
 <img width="1384" height="703" alt="Bandit5" src="https://github.com/user-attachments/assets/8dba8de2-e9aa-45c0-9acc-8141d5b67739" />
 
 
+
+
+### LEVEL 6
+This challenge states that :-
+
+"The password for the next level is stored somewhere on the server and has all of the following properties:
+
+* owned by user bandit7
+
+* owned by group bandit6
+
+* 33 bytes in size"
+
+Just like last time we will use the 'find' command but instead of using '.' we will use '/', which scans the whole server.
+
+And for the properties of the files like the size, who's the user and who's in the group, we can use options like '-type f' to search for files, '-size' for the specific size of the file and options like '-user' and '-group' to set who's the user and who's in the group.
+
+This will set some of the options for the file search and you will get multiple 'Permission denied' error, but that's okay, and you will find one file position for the required file.
+
+Use 'cat' command on that file and you will get the password for nex level.
+
+<img width="1321" height="637" alt="Bandit6Again" src="https://github.com/user-attachments/assets/f01e52cd-55cb-4743-9f6e-6c7d57cc2547" />
+<img width="1318" height="692" alt="Bandit6 Again3" src="https://github.com/user-attachments/assets/a6c8f3e5-167e-48af-8ed5-f83466d33248" />
+<img width="1376" height="712" alt="Bandit6" src="https://github.com/user-attachments/assets/c25241d6-c6ac-47b1-a88d-7d54e1d83a0a" />
+
+
+
+
+### LEVEL 7
+This challenge is quite easy, 
+"The password for the next level is stored in the file data.txt next to the word millionth"
+
+So we just need to use pipelining, starting with 'cat' command then redirect it to the 'grep' command.
+
+* 'cat' : displays the entire content of a file
+
+* 'grep' : used to search for specific text patterns (regular expressions) within files or data streams and print the matching lines
+  
+<img width="1419" height="680" alt="Bandit7" src="https://github.com/user-attachments/assets/abd11a7a-caca-4fbc-bd21-df563fc55018" />
+
+
