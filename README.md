@@ -163,3 +163,28 @@ So we just need to use pipelining, starting with 'cat' command then redirect it 
 <img width="1419" height="680" alt="Bandit7" src="https://github.com/user-attachments/assets/abd11a7a-caca-4fbc-bd21-df563fc55018" />
 
 
+
+
+### LEVEL 8
+The challenge, "The password for the next level is stored in the file data.txt and is the only line of text that occurs only once".
+
+This challenge is easy. As it states that the password is the line which occured only once in all of the lines.
+
+We can use 'sort' command to arrange the lines in ascending order then we can use 'uniq' command with '-u' option which will print out only the unique line in all the lines.
+
+And we got our password. 
+<img width="1424" height="714" alt="Bandit8" src="https://github.com/user-attachments/assets/424d28a5-35cc-4f16-b006-6ce6d27df268" />
+
+
+
+### LEVEL 9
+
+The challenge for this level is, 
+"The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several ‘=’ characters."
+
+Using 'cat' command here too which shows random line of gibberish, but using the 'strings' command which is used to extract printable character sequences (text strings) from binary files, object files, or any other non-text files. And then redirecting it to the 'grep' command will do it.
+
+
+<img width="1450" height="733" alt="Bandit9_Again" src="https://github.com/user-attachments/assets/19e47c04-a916-4b21-ac5a-7e237ee20964" />
+<img width="1289" height="462" alt="Bandit9" src="https://github.com/user-attachments/assets/1261cf73-c564-46c9-94c8-004af1dad976" />
+
